@@ -1,0 +1,135 @@
+@use 'colors';
+
+.Footer {
+  background-color: colors.$dark-blue-footer-bg;
+  padding-left: 100px;
+  padding-right: 65px;
+  padding-top: 180px;
+  padding-bottom: 90px;
+  .logo {
+    width: 120px;
+  }
+  .footer-main-nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    .address {
+      display: flex;
+      align-items: flex-start;
+      .location-icon {
+        margin-top: 8px;
+      }
+      p {
+        width: 300px;
+        margin-left: 20px;
+        line-height: 1.5;
+      }
+    }
+    .phone-email-sect {
+      .phone,
+      .email {
+        margin-bottom: 20px;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+    .about-us-sect {
+      .link {
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+    .contact-us-sect {
+      .link {
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      width: 120px;
+      display: flex;
+      justify-content: space-between;
+      .icon-wrapper {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          border-color: colors.$call-action-cyan;
+          color: colors.$call-action-cyan;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Footer {
+    padding-left: 55px;
+    padding-right: 55px;
+    .footer-main-nav {
+      .address {
+        p {
+          width: 220px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .Footer {
+    .logo {
+      width: 160px;
+    }
+    .footer-main-nav {
+      flex-direction: column;
+      .address {
+        margin-bottom: 20px;
+        p {
+          width: 300px;
+          margin-left: 20px;
+        }
+      }
+      .phone-email-sect {
+        margin-bottom: 50px;
+      }
+      .about-us-sect {
+        margin-bottom: 20px;
+        .link {
+          width: fit-content;
+        }
+      }
+      .contact-us-sect {
+        margin-bottom: 40px;
+        .link {
+          width: fit-content;
+        }
+      }
+
+      .socials {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Footer {
+    padding-top: 220px;
+  }
+}

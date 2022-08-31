@@ -1,0 +1,230 @@
+@use 'colors';
+
+.Testimonial {
+  padding-top: 110px;
+  padding-bottom: 280px;
+  background-color: colors.$dark-blue-main-bg;
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  .card-wrapper {
+    width: 400px;
+    height: 220px;
+    position: relative;
+    margin: 10px;
+    .quote-mark {
+      position: absolute;
+      top: -35px;
+      left: -10px;
+    }
+    .inner-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 40px 30px 30px;
+      border-radius: 5px;
+      background-color: colors.$dark-blue-testimonials-bg;
+      .feedback {
+        line-height: 1.5;
+      }
+      .customer {
+        display: flex;
+        padding-top: 25px;
+        .avatar {
+          width: 30px;
+          height: auto;
+          border-radius: 50%;
+        }
+        .info {
+          padding-left: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .name {
+            font-weight: 700;
+          }
+          .job-title {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .sign-up-container {
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: colors.$dark-blue-intro-email;
+    width: 800px;
+    padding: 40px 50px 35px;
+    text-align: center;
+    border-radius: 15px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    p {
+      padding: 25px 30px;
+    }
+
+    .sign-up-form {
+      display: flex;
+      justify-content: space-between;
+      .form-control {
+        width: 72%;
+        padding-right: 35px;
+        .textfield {
+          width: 100%;
+          height: 40px;
+          border-radius: 50px;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .error {
+          padding-top: 5px;
+          text-align: left;
+          padding-left: 30px;
+          font-weight: 700;
+          color: colors.$error;
+        }
+      }
+      .submit-btn {
+        color: #fff;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 0 30px;
+        height: 40px;
+        background-image: linear-gradient(
+          to right,
+          colors.$call-action-cyan,
+          colors.$call-action-blue
+        );
+
+        &:hover {
+          background-image: linear-gradient(
+            to right,
+            colors.$call-action-cyan,
+            colors.$call-action-cyan
+          );
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .Testimonial {
+    padding-left: 60px;
+    padding-right: 60px;
+    .card-wrapper {
+      width: 350px;
+      height: 200px;
+      .inner-wrapper {
+        padding: 30px 25px 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Testimonial {
+    padding-bottom: 210px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    .card-wrapper {
+      width: 330px;
+      height: 170px;
+      .quote-mark {
+        position: absolute;
+        top: 0;
+        left: 5px;
+        transform: translateY(-100%);
+        width: 25px;
+      }
+      .inner-wrapper {
+        padding: 20px;
+        .customer {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Testimonial {
+    .sign-up-container {
+      width: 650px;
+      padding: 30px 40px;
+      .sign-up-form {
+        .form-control {
+          width: 65%;
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .Testimonial {
+    flex-direction: column;
+    .card-wrapper {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .sign-up-container {
+      width: 90%;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        padding: 20px 0;
+      }
+      .sign-up-form {
+        flex-direction: column;
+        .form-control {
+          width: 100%;
+          padding-right: 0px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Testimonial {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 240px;
+    .card-wrapper {
+      width: 100%;
+      min-height: 200px;
+      height: auto;
+    }
+    .sign-up-container {
+      bottom: -140px;
+    }
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .Testimonial {
+    padding-left: 25px;
+    padding-right: 25px;
+    .card-wrapper {
+      min-height: 220px;
+    }
+  }
+}

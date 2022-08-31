@@ -1,0 +1,95 @@
+@use 'colors';
+
+.Hero1 {
+  height: 1050px;
+  background-color: colors.$dark-blue-intro-email;
+  background-image: url('../../images/bg-curvy-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  text-align: center;
+
+  .heading {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .description {
+    line-height: 1.5;
+    font-size: 18px;
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  .started {
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    color: colors.$white;
+    font-weight: 700;
+    background-image: linear-gradient(to right, colors.$call-action-cyan, colors.$call-action-blue);
+    font-size: 16px;
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        colors.$call-action-cyan,
+        colors.$call-action-cyan
+      );
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Hero1 {
+    padding-top: 30px;
+    height: 750px;
+    .illustration-intro {
+      width: 500px;
+    }
+    .heading {
+      font-size: 36px;
+      width: 600px;
+    }
+    .started {
+      width: 240px;
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .Hero1 {
+    background-image: url('../../images/bg-curvy-mobile.svg');
+    height: 600px;
+    .illustration-intro {
+      width: 350px;
+    }
+    .heading {
+      font-size: 28px;
+      width: 90%;
+    }
+    .description {
+      font-size: 16px;
+      width: 90%;
+    }
+    .started {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .Hero1 {
+    .illustration-intro {
+      width: 80%;
+    }
+    .heading {
+      padding-bottom: 10px;
+      line-height: 1.25;
+    }
+  }
+}
